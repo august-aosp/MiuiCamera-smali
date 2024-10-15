@@ -300,57 +300,11 @@
 .end method
 
 .method public static K(Landroid/content/Intent;)Z
-    .locals 3
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "intent"
-        }
-    .end annotation
+    .locals 1
 
-    const/4 v0, 0x0
+    const/4 v0, 0x1
 
-    if-eqz p0, :cond_0
-
-    const-string v1, "StartActivityWhenLocked"
-
-    invoke-virtual {p0, v1, v0}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_0
-
-    const/4 p0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    move p0, v0
-
-    :goto_0
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string/jumbo v2, "start activity when locked: "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    new-array v0, v0, [Ljava/lang/Object;
-
-    const-string v2, "CameraIntentManager"
-
-    invoke-static {v2, v1, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    return p0
+    return v0
 .end method
 
 .method public static M(Landroid/content/Intent;)Z
