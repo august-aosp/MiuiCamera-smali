@@ -57,7 +57,7 @@
 
     move-result v2
 
-    const/16 v5, 0x12
+    const/16 v5, 0x15
 
     const/16 v6, 0xe
 
@@ -155,19 +155,35 @@
 
     aput-object v22, v2, v6
 
-    const-class v22, [Landroid/hardware/camera2/params/HighSpeedVideoConfiguration;
+    const-class v22, [Landroid/hardware/camera2/params/StreamConfiguration;
 
     aput-object v22, v2, v3
 
-    const-class v22, Landroid/hardware/camera2/params/ReprocessFormatsMap;
+    const-class v22, [Landroid/hardware/camera2/params/StreamConfigurationDuration;
 
     const/16 v21, 0x10
 
     aput-object v22, v2, v21
 
+    const/16 v21, 0x11
+
+    aput-object v22, v2, v21
+
+    const-class v22, [Landroid/hardware/camera2/params/HighSpeedVideoConfiguration;
+
+    const/16 v21, 0x12
+
+    aput-object v22, v2, v21
+
+    const-class v22, Landroid/hardware/camera2/params/ReprocessFormatsMap;
+
+    const/16 v21, 0x13
+
+    aput-object v22, v2, v21
+
     sget-object v22, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
 
-    const/16 v20, 0x11
+    const/16 v20, 0x14
 
     aput-object v22, v2, v20
 
@@ -293,9 +309,21 @@
 
     aput-object v22, v2, v6
 
-    aput-object p12, v2, v3
+    aput-object v22, v2, v3
 
     const/16 v3, 0x10
+
+    aput-object v22, v2, v3
+
+    const/16 v3, 0x11
+
+    aput-object v22, v2, v3
+
+    const/16 v3, 0x12
+
+    aput-object p12, v2, v3
+
+    const/16 v3, 0x13
 
     aput-object p13, v2, v3
 
@@ -303,7 +331,7 @@
 
     move-result-object v3
 
-    const/16 v4, 0x11
+    const/16 v4, 0x14
 
     aput-object v3, v2, v4
 
