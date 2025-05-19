@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:id="@id/top_menu_root" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.android.camera.ui.ShapeBackGroundView android:id="@id/top_menu_background" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <FrameLayout android:layout_gravity="center|top" android:id="@id/top_menu" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/top_menu_recyclerview" android:visibility="gone" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:overScrollMode="never" />
+        <include android:id="@id/layout_burst_menu" android:visibility="gone" layout="@layout/timer_burst_menu" />
+        <include android:id="@id/layout_reference_line" android:visibility="gone" layout="@layout/reference_line_menu" />
+        <include android:id="@id/layout_watermark" android:visibility="gone" layout="@layout/watermark_menu" />
+        <com.android.camera2.compat.theme.custom.mm.top.TopExpendViewMM android:gravity="bottom" android:id="@id/top_menu_expand_view" android:focusable="false" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </FrameLayout>
+</FrameLayout>
